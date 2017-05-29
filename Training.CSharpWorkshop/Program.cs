@@ -22,11 +22,16 @@ namespace Training.CSharpWorkshop
             Console.WriteLine();
 
             Console.WriteLine("Hello " + userName + ".");
-            Console.WriteLine("Role: Admin.");
+            Console.WriteLine(GetRoleMessage(userName));
             Console.WriteLine();
 
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
+        }
+
+        public static string GetRoleMessage(string userName)
+        {
+            return "Role: Admin.";
         }
     }
 }
