@@ -10,6 +10,11 @@ namespace Training.CSharpWorkshop
     {
         public static void Main(string[] args)
         {
+            Process();
+        }
+
+        public static void Process()
+        {
             Console.WriteLine("Welcome to the C# Workshop.");
 
             Console.WriteLine("Please enter your user name: ");
