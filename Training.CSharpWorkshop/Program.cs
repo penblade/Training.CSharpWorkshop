@@ -6,10 +6,22 @@ using System.Threading.Tasks;
 
 namespace Training.CSharpWorkshop
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to the C# Workshop.");
+
+            Console.WriteLine("Please enter your user name: ");
+            var userName = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Hello " + userName + ".");
+            Console.WriteLine("Role: Admin.");
+            Console.WriteLine();
+
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
         }
     }
 }
