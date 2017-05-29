@@ -8,7 +8,7 @@ namespace Training.CSharpWorkshop.Tests
     {
         [Ignore]
         [TestMethod]
-        public void ProcessTest()
+        public void IgnoreTest()
         {
             Assert.Fail();
         }
