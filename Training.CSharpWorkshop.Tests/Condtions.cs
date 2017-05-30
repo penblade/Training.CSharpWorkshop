@@ -45,5 +45,31 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void IfElseIfElseTest()
+        {
+            // Arrange
+            var userId = 2;
+            var expected = "Dave";
+
+            // Act
+            string actual = String.Empty;
+            if (userId == 1)
+            {
+                actual = "Andrew";
+            }
+            else if (userId == 2)
+            {
+                actual = "Dave";
+            }
+            else
+            {
+                actual = "UserDoesNotExist";
+            }
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
