@@ -63,5 +63,44 @@ namespace Training.CSharpWorkshop.Tests
             guest = actual as GuestUser;
             Assert.IsTrue(guest.GuestMethodOnly());
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidCastException),
+            "InvalidCastException was performed")]
+        public void AdminIsNotAGuestUserCastToException()
+        {
+            // Arrange
+            var repository = new Repository();
+            var expectedName = "Andrew";
+
+            // Act
+            var actual = repository.Find("Andrew");
+
+            // Assert
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(expectedName, actual.Name);
+
+            // Will throw an exception if not the correct type.
+            var guest = (GuestUser)actual;
+        }
+
+        [TestMethod]
+        public void AdminIsNotAGuestUserCastToNull()
+        {
+            // Arrange
+            var repository = new Repository();
+            var expectedName = "Andrew";
+
+            // Act
+            var actual = repository.Find("Andrew");
+
+            // Assert
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(expectedName, actual.Name);
+
+            // Will change admin to null if not the correct type.
+            var guest = actual as GuestUser;
+            Assert.IsNull(guest);
+        }
     }
 }
