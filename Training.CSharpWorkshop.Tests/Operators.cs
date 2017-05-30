@@ -96,5 +96,23 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.AreEqual(3, number1);
         }
+
+        [TestMethod]
+        // IncrementPrefix  (++i) add 1 before assignment
+        // IncrementPostfix (i++) add 1 after assignment
+        // DecrementPrefix  (--i) subtract 1 before assignment
+        // DecrementPostfix (i--) subtract 1 after assignment
+        public void IncrementPostfix()
+        {
+            // Arrange
+            var count = 0;
+
+            // Act
+            var actual = count++;
+
+            // Assert
+            Assert.AreEqual(0, actual);
+            Assert.AreEqual(1, count);
+        }
     }
 }
