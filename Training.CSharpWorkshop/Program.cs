@@ -31,7 +31,16 @@ namespace Training.CSharpWorkshop
 
         public static string GetRoleMessage(string userName)
         {
-            return "Role: Admin.";
+            string role;
+            if (userName == "Andrew")
+            {
+                role = "Admin";
+            }
+            else
+            {
+                role = "Guest";
+            }
+            return String.Format("Role: {0}.", role);
         }
     }
 }
