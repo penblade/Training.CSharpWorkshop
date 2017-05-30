@@ -47,7 +47,7 @@ namespace Training.CSharpWorkshop.Tests
             var expectedName = "Jon";
 
             // Act
-            repository.Insert(new User()
+            repository.Insert(new GuestUser()
             {
                 Id = 42,
                 Name = "Jon"
