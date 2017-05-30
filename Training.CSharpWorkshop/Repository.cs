@@ -59,5 +59,11 @@ namespace Training.CSharpWorkshop
             // Add logic to add users only if they are in the admin role.
             _userList.Add(user);
         }
+
+        public void Delete(User user)
+        {
+            // Add logic to remove users only if they are in the admin role.
+            _userList.Remove(user);
+        }
     }
 }
