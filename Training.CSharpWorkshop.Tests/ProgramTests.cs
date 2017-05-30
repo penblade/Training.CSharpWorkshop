@@ -26,5 +26,19 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void GetRoleMessageForGuestTest()
+        {
+            // Arrange
+            var userName = "Dave";
+            var expected = "Role: Guest.";
+
+            // Act
+            var actual = Program.GetRoleMessage(userName);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
