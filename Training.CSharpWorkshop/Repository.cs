@@ -21,17 +21,17 @@ namespace Training.CSharpWorkshop
 
             int i = 0;
 
-            var user = new User();
+            User user;
+
+            user = new AdminUser();
             user.Id = i++;
             user.Name = "Andrew";
-            user.Role = RoleEnum.Admin;
 
             list.Add(user);
 
-            user = new User();
+            user = new GuestUser();
             user.Id = i++;
             user.Name = "Dave";
-            user.Role = RoleEnum.Guest;
 
             list.Add(user);
 
