@@ -66,5 +66,49 @@ namespace Training.CSharpWorkshop.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void TryCatchFinallyTest()
+        {
+            // Arrange
+            var userId = 2;
+            var finallyWasReached = false;
+
+            var expected = "Dave";
+            var expectedFinallyWasReached = true;
+
+            // Act
+            string actual = String.Empty;
+
+            try
+            {
+                switch (userId)
+                {
+                    case 1:
+                        actual = "Andrew";
+                        break;
+
+                    case 2:
+                        actual = "Dave";
+                        break;
+
+                    default:
+                        throw new ArgumentException("User does not exist");
+                }
+            }
+
+            // Assert
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+            finally
+            {
+                finallyWasReached = true;
+            }
+
+            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expectedFinallyWasReached, finallyWasReached);
+        }
     }
 }
