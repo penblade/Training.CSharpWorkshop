@@ -58,6 +58,7 @@
     <Compile Include="RepositoryTest.cs" />
     <Compile Include="GenericsTest.cs" />
     <Compile Include="EnumTest.cs" />
+    <Compile Include="PolymorphismTest.cs" />
     <Compile Include="WhileLoops.cs" />
   </ItemGroup>
   <ItemGroup>
