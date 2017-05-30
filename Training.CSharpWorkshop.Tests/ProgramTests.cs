@@ -40,5 +40,19 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void GetRoleMessageForNoneTest()
+        {
+            // Arrange
+            var userName = "Don";
+            var expected = "Role: None.";
+
+            // Act
+            var actual = Program.GetRoleMessage(userName);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
