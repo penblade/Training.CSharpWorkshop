@@ -14,7 +14,7 @@ namespace Training.CSharpWorkshop.Tests
         }
 
         [TestMethod()]
-        public void GetRoleMessageTest()
+        public void GetRoleMessageForAdminTest()
         {
             // Arrange
             var userName = "Andrew";
