@@ -52,5 +52,12 @@ namespace Training.CSharpWorkshop
         {
             return _userList.Find(item => item.Name == name);
         }
+
+        public void Insert(User user)
+        {
+            // We could add logic to prevent duplicates here.
+            // Add logic to add users only if they are in the admin role.
+            _userList.Add(user);
+        }
     }
 }
