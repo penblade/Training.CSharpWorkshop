@@ -8,5 +8,32 @@ namespace Training.CSharpWorkshop
 {
     public class Repository
     {
+        private readonly List<User> _userList;
+
+        public Repository()
+        {
+            _userList = GetUsers();
+        }
+
+        private List<User> GetUsers()
+        {
+            var list = new List<User>();
+
+            int i = 0;
+
+            var user = new User();
+            user.Id = i++;
+            user.Name = "Andrew";
+
+            list.Add(user);
+
+            user = new User();
+            user.Id = i++;
+            user.Name = "Dave";
+
+            list.Add(user);
+
+            return list;
+        }
     }
 }
