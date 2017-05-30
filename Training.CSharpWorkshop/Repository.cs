@@ -35,5 +35,17 @@ namespace Training.CSharpWorkshop
 
             return list;
         }
+
+        public User GetUserByName(string name)
+        {
+            foreach (var item in _userList)
+            {
+                if (item.Name == name)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
     }
 }
