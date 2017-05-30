@@ -32,7 +32,15 @@ namespace Training.CSharpWorkshop
         public static string GetRoleMessage(string userName)
         {
             string role;
-            if (userName == "Andrew")
+
+            var repository = new Repository();
+            var user = repository.GetUserByName(userName);
+
+            if (user == null)
+            {
+                role = "None";
+            }
+            else if (user.Role == RoleEnum.Admin)
             {
                 role = "Admin";
             }
