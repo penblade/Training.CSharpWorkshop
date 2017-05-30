@@ -130,5 +130,21 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.AreEqual(String.Empty, actual);
         }
+
+        [TestMethod]
+        public void NullCoalescing()
+        {
+            // Arrange
+            string item = null;
+
+            // Act
+            // actual = item is not null ?
+            //          if true return item :
+            //          else return an empty string.
+            var actual = item ?? String.Empty;
+
+            // Assert
+            Assert.AreEqual(String.Empty, actual);
+        }
     }
 }
