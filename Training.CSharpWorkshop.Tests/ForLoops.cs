@@ -47,5 +47,43 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ForeachContinueBreakTest()
+        {
+            // Arrange
+            var list = new List<string>();
+
+            list.Add("Andrew");
+            list.Add("Dave");
+            list.Add("Don");
+            list.Add("Mike");
+            list.Add("Sam");
+            list.Add("Vidya");
+
+            var expected = "Andrew, Don";
+
+            // Act
+            var actual = String.Empty;
+
+            foreach (var item in list)
+            {
+                // Do not process this loop any further and continue to the next.
+                if (item == "Dave") continue;
+                if (item == "Mike") continue;
+
+                // Do not process this loop any further and exit the while loop
+                // regardless if the condition is met or not.
+                if (item == "Sam") break;
+
+                actual += item + ", ";
+            }
+
+            actual = actual.Trim();
+            actual = actual.TrimEnd(',');
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
