@@ -33,7 +33,7 @@ namespace Training.CSharpWorkshop.Tests
             // Arrange
             var repository = new Repository();
             var expectedName = "Dave";
-            var expectedCanInsert = false;
+            var expectedCanInsert = true;
             var expectedCanDelete = false;
             var expectedCanFind = true;
 
