@@ -54,6 +54,7 @@
     <Compile Include="Operators.cs" />
     <Compile Include="Condtions.cs" />
     <Compile Include="Exceptions.cs" />
+    <Compile Include="ForLoops.cs" />
     <Compile Include="WhileLoops.cs" />
   </ItemGroup>
   <ItemGroup>
