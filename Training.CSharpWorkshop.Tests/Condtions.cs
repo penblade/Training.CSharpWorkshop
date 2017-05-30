@@ -99,5 +99,30 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void SwitchCombinedCases()
+        {
+            // Arrange
+            var userId = 2;
+            var expected = "UserDoesExist";
+
+            // Act
+            string actual = String.Empty;
+            switch (userId)
+            {
+                case 1:
+                case 2:
+                    actual = "UserDoesExist";
+                    break;
+
+                default:
+                    actual = "UserDoesNotExist";
+                    break;
+            }
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
