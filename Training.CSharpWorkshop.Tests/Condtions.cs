@@ -71,5 +71,33 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void SwitchTest()
+        {
+            // Arrange
+            var userId = 2;
+            var expected = "Dave";
+
+            // Act
+            string actual = String.Empty;
+            switch (userId)
+            {
+                case 1:
+                    actual = "Andrew";
+                    break;
+
+                case 2:
+                    actual = "Dave";
+                    break;
+
+                default:
+                    actual = "UserDoesNotExist";
+                    break;
+            }
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
