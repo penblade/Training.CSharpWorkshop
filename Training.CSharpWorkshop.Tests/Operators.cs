@@ -42,5 +42,26 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.IsFalse(actual);
         }
+
+        [TestMethod]
+        // BitwiseOr (|), LogicalOr (||).
+        public void LogicalOr()
+        {
+            // Arrange
+            var number = 1;
+            var text = "file";
+
+            // Act
+
+            // BitwiseOr: Both cases will be compared.
+            // var actual = number == 1 | text == "folder";
+
+            // If the first case is true, only the first case will be compared.
+            // This is considered a short-circuit evaluation.
+            var actual = number == 1 || text == "folder";
+
+            // Assert
+            Assert.IsTrue(actual);
+        }
     }
 }
