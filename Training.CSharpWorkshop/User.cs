@@ -1,6 +1,6 @@
 ﻿namespace Training.CSharpWorkshop
 {
-    public abstract class User
+    public abstract class User : IUser
     {
         public int Id { get; set; }
         public string Name { get; set; }
