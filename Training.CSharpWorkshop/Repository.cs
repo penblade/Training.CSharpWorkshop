@@ -8,20 +8,20 @@ namespace Training.CSharpWorkshop
 {
     public class Repository
     {
-        private readonly List<User> _userList;
+        private readonly List<IUser> _userList;
 
         public Repository()
         {
             _userList = GetUsers();
         }
 
-        private List<User> GetUsers()
+        private List<IUser> GetUsers()
         {
-            var list = new List<User>();
+            var list = new List<IUser>();
 
             int i = 0;
 
-            User user;
+            IUser user;
 
             user = new AdminUser();
             user.Id = i++;
@@ -38,7 +38,7 @@ namespace Training.CSharpWorkshop
             return list;
         }
 
-        public User GetUserByName(string name)
+        public IUser GetUserByName(string name)
         {
             foreach (var item in _userList)
             {
@@ -50,19 +50,19 @@ namespace Training.CSharpWorkshop
             return null;
         }
 
-        public User Find(string name)
+        public IUser Find(string name)
         {
             return _userList.Find(item => item.Name == name);
         }
 
-        public void Insert(User user)
+        public void Insert(IUser user)
         {
             // We could add logic to prevent duplicates here.
             // Add logic to add users only if they are in the admin role.
             _userList.Add(user);
         }
 
-        public void Delete(User user)
+        public void Delete(IUser user)
         {
             // Add logic to remove users only if they are in the admin role.
             _userList.Remove(user);
