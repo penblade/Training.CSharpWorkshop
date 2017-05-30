@@ -63,5 +63,23 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.IsTrue(actual);
         }
+
+        [TestMethod]
+        // Addition (+), Subtraction (-), Multiplication (*), and Division (/)
+        // Parentheses are honored.
+        // Strings can also be concatenated,
+        // however, String.Format is typically recommended instead.
+        public void Addition()
+        {
+            // Arrange
+            var number1 = 1;
+            var number2 = 2;
+
+            // Act
+            var actual = number1 + number2;
+
+            // Assert
+            Assert.AreEqual(3, actual);
+        }
     }
 }
