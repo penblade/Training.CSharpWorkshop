@@ -37,5 +37,28 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.IsNull(actual);
         }
+
+        [TestMethod()]
+        public void InsertTest()
+        {
+            // Arrange
+            var repository = new Repository();
+            var expectedId = 42;
+            var expectedName = "Jon";
+
+            // Act
+            repository.Insert(new User()
+            {
+                Id = 42,
+                Name = "Jon"
+            });
+
+            var actual = repository.Find("Jon");
+
+            // Assert
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(expectedId, actual.Id);
+            Assert.AreEqual(expectedName, actual.Name);
+        }
     }
 }
