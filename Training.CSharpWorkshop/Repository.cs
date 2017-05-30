@@ -47,5 +47,10 @@ namespace Training.CSharpWorkshop
             }
             return null;
         }
+
+        public User Find(string name)
+        {
+            return _userList.Find(item => item.Name == name);
+        }
     }
 }
