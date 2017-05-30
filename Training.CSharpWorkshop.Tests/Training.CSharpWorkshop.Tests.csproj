@@ -57,6 +57,7 @@
     <Compile Include="ForLoops.cs" />
     <Compile Include="RepositoryTest.cs" />
     <Compile Include="GenericsTest.cs" />
+    <Compile Include="EnumTest.cs" />
     <Compile Include="WhileLoops.cs" />
   </ItemGroup>
   <ItemGroup>
