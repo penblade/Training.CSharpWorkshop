@@ -81,5 +81,20 @@ namespace Training.CSharpWorkshop.Tests
             // Assert
             Assert.AreEqual(3, actual);
         }
+
+        [TestMethod]
+        // Assignments (+=, -=, *=, /=).
+        public void AdditionAssignment()
+        {
+            // Arrange
+            var number1 = 1;
+            var number2 = 2;
+
+            // Act
+            number1 += number2;
+
+            // Assert
+            Assert.AreEqual(3, number1);
+        }
     }
 }
