@@ -53,6 +53,7 @@
     <Compile Include="Sandbox.cs" />
     <Compile Include="Operators.cs" />
     <Compile Include="Condtions.cs" />
+    <Compile Include="Exceptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
