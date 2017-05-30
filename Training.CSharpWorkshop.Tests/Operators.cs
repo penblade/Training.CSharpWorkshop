@@ -114,5 +114,21 @@ namespace Training.CSharpWorkshop.Tests
             Assert.AreEqual(0, actual);
             Assert.AreEqual(1, count);
         }
+
+        [TestMethod]
+        public void Conditional()
+        {
+            // Arrange
+            string item = null;
+
+            // Act
+            // actual = item is not null ?
+            //          if true return item :
+            //          else return an empty string.
+            var actual = item != null ? item : String.Empty;
+
+            // Assert
+            Assert.AreEqual(String.Empty, actual);
+        }
     }
 }
