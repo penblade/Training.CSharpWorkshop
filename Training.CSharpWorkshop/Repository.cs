@@ -24,12 +24,14 @@ namespace Training.CSharpWorkshop
             var user = new User();
             user.Id = i++;
             user.Name = "Andrew";
+            user.Role = RoleEnum.Admin;
 
             list.Add(user);
 
             user = new User();
             user.Id = i++;
             user.Name = "Dave";
+            user.Role = RoleEnum.Guest;
 
             list.Add(user);
 
