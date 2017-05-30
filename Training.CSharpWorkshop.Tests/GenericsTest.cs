@@ -60,5 +60,21 @@ namespace Training.CSharpWorkshop.Tests
             Assert.AreEqual(expectedId, actual.Id);
             Assert.AreEqual(expectedName, actual.Name);
         }
+
+        [TestMethod()]
+        public void DeleteTest()
+        {
+            // Arrange
+            var repository = new Repository();
+
+            // Act
+            var user = repository.Find("Andrew");
+            repository.Delete(user);
+
+            var actual = repository.Find("Andrew");
+
+            // Assert
+            Assert.IsNull(actual);
+        }
     }
 }
